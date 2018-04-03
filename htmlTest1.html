@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            hello world!
-        </title>
-    </head>
-    <body onload="checkCookies()">
-        <button id="button1" onclick="sayHello(123)" type="button">
-            click me
-        </button>
-        <script type="text/javascript">
-            function sayHello (somewords) {
-                document.getElementById("button1").innerHTML=somewords+"this is a test";
-            }
-             function checkCookies () {
+<head>
+    <title>
+        hello world!
+    </title>
+</head>
+<body onload="checkCookies()" onunload="sayBye()">
+    <button id="button1" onclick="sayHello(123)" type="button">
+        click me
+    </button>
+
+    <label style="background-color: red;width: 120px;padding: 40px;color: blue;" onmouserover = "mOver(this)"  onmouseout="mOut(this)">hi</label>
+
+    <script type="text/javascript">
+        function sayHello (somewords) {
+            document.getElementById("button1").innerHTML=somewords+"this is a test";
+        }
+        function checkCookies () {
             if (navigator.cookieEnabled) {
-                    alert("启用cookie")
-                }
-                 else {
-                         alert("未启用cookie")
-                    }
+                alert("启用cookie")
             }
-        </script>
-    </body>
+            else {
+               alert("未启用cookie")
+           }
+       }
+       function mOver(obj){
+        obj.innerHTML="谢谢";
+    }
+    function mOut(obj){
+        obj.innerHTML="鼠标移动到上面";
+    }
+</script>
+</body>
 </html>
