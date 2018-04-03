@@ -5,13 +5,21 @@
             hello world!
         </title>
     </head>
-    <body>
+    <body onload="checkCookies()">
         <button id="button1" onclick="sayHello(123)" type="button">
             click me
         </button>
         <script type="text/javascript">
             function sayHello (somewords) {
                 document.getElementById("button1").innerHTML=somewords+"this is a test";
+            }
+             function checkCookies () {
+            if (navigator.cookieEnabled) {
+                    alert("启用cookie")
+                }
+                 else {
+                         alert("未启用cookie")
+                    }
             }
         </script>
     </body>
