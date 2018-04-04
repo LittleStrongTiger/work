@@ -5,7 +5,7 @@
             hello world!
         </title>
     </head>
-    <body onload="checkCookies()">
+    <body  onunload="sayBye()">
         <button id="button1" onclick="sayHello(123)" type="button">
             click me
         </button>
@@ -13,13 +13,16 @@
             function sayHello (somewords) {
                 document.getElementById("button1").innerHTML=somewords+"this is a test";
             }
-             function checkCookies () {
+            function checkCookies () {
             if (navigator.cookieEnabled) {
                     alert("启用cookie")
                 }
                  else {
                          alert("未启用cookie")
                     }
+            }
+            function sayBye() {
+                alert("ByeBye");
             }
         </script>
     </body>
