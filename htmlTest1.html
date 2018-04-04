@@ -6,15 +6,16 @@
         </title>
     </head>
     <body onload="checkCookies()">
-        <button id="button1" onclick="sayHello(小明)" type="button">
+        <button id="button1" onclick="sayHello('小明')" type="button">
             click me
         </button>
         <label onmouseout="mOut(this)" onmouserover="mOver(this)" style="background-color: red;width: 120px;padding: 40px;color: blue;">
             hi
         </label>
         <script type="text/javascript">
+
             function sayHello (somewords) {
-                document.getElementById("button1").innerHTML=somewords+" ，this is a test";
+                document.getElementById("button1").innerHTML= somewords+" ，this is a test";
             }
             function checkCookies () {
 
